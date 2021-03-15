@@ -12,6 +12,16 @@ body {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .container {
     width: 100%;
     max-width: 1230px;
@@ -48,7 +58,115 @@ body {
     padding: 0 15px;
     color: #fff;
     text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 .nav__link.active {
     background-color: #004AF2;
+}
+
+/* Intro */
+
+.intro {
+    
+    background: #000 url("../images/bg.png") no-repeat center / cover;
+
+}
+
+.intro__inner {
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.intro__text {
+    margin-bottom: 50px;
+    text-align: right;
+}
+
+.intro__countries {
+    font-size: 15px;
+    color: #fff;
+}
+
+.intro__title {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 110px;
+    line-height: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.intro__title-amp {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* bottom: 50px; */
+    font-size: 170px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 900;
+    line-height: 100px;
+}
+
+/*  FORM  */
+
+.request-form {
+    max-width: 400px;
+    background: #004AF2;
+    border-radius: 5px;
+}
+
+.request-form__header {
+    padding: 20px 30px;
+    background: #033FC9;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.request-form__title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.request-form__text {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.request-form__content {
+    padding: 30px;
+}
+
+.form__group {
+    margin-top: 25px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    background: none;
+    padding-bottom: 12px;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: 'PT Sans' serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: border-color 0.2s linear;
+}
+
+.input::placeholder {
+    color: #FFFFFF;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom-color: #FFFFFF;
 }
