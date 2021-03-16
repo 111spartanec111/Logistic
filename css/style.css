@@ -227,19 +227,17 @@ ul, ol {
     color: #FFFFFF;
     border-radius: 5px;
     vertical-align: middle;
+    outline: none;
 }
-
+.btn--orange {
+    background: linear-gradient(90deg, #FF903E 0%, #FF2C2C 100%);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
 .btn--block {
     display: block;
     width: 100%;
     box-shadow: none;
 }
-
-.btn--orange {
-    background: linear-gradient(90deg, #FF903E 0%, #FF2C2C 100%);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-}
-
 
 /* Section Services */
 
@@ -579,7 +577,7 @@ ul, ol {
     font-size: 90px;
     line-height: 108px;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.06);
     text-align: center;
 }
 .mission:before,
