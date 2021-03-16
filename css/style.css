@@ -26,6 +26,16 @@ ul, ol {
     list-style: none;
 }
 
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*   Container   */
+
+
 .container {
     width: 100%;
     max-width: 1230px;
@@ -340,11 +350,14 @@ ul, ol {
 .clients__list li {
     margin: 0 50px 40px 0;
     padding: 5px;
+    border-radius: 10px;
+    transition: all 0.2s linear;
 }
 
 .clients__list li:hover {
     box-shadow: 0 5px 30px rgba(119, 118, 118, 0.2);
     border-radius: 10px;
+    background: rgba(0, 74, 241, 0.2);
 }
 
 .clients-love {
@@ -418,4 +431,66 @@ ul, ol {
 }
 .reviews__content p:first-child {
     text-indent: 20px;
+}
+
+
+/*   BENEFITS   */
+
+
+.benefits {
+    display: flex;
+}
+.benefits__col {
+    width: 50%;
+}
+.benefits-list {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    padding-left: 50px;
+    background-image: linear-gradient(to bottom, #fff 45%, #A5A5A5 45%);
+    background-size: 2px 35px;
+    background-repeat: repeat-y;
+    background-position: 12px -7px; 
+    
+}
+.benefits-list:before,
+.benefits-list:after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 36px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
+.benefits-list:before {
+    background: url('../images/grey.png');
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+.benefits-list:after {
+    background: url('../images/green.png');
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.benefits-list__item:not(:last-child) {
+    margin-bottom: 35px;
+}
+.benefits-list__title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 25px;
+    color: #2C2C2C;
+    margin-bottom: 12px;
+}
+.benefits-list__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #585858;
 }
