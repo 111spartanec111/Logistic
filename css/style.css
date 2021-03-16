@@ -243,6 +243,9 @@ ul, ol {
 .section--map {
     background: url("../images/map.png") no-repeat left 180px top 160px;
 }
+.section--gray {
+    background: #F9F9F9;;
+}
 .section__title {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
@@ -493,4 +496,59 @@ ul, ol {
     font-size: 15px;
     line-height: 21px;
     color: #585858;
+}
+
+
+/*    TEAM   */
+
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team__col {
+    width: 33.33333%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.team__photo {
+    box-shadow: 10px 5px 13px rgba(0, 0, 0, 0.16);
+    margin-bottom: 13px;
+}
+.team__name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2C2C2C;
+    margin-bottom: 5px;
+}
+.team__prof {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #585858;
+    margin-bottom: 11px;
+}
+.team__contacts {
+    line-height: 18px;
+    font-size: 14px;
+    color:  #585858;
+}
+.team__contacts li {
+    margin-bottom: 9px;
+}
+
+.team__contacts a {
+    text-decoration: none;
+    color: inherit;
+}
+.team__contacts a:hover {
+    text-decoration: underline;
+}
+.team__contacts-icon {
+    width: 16px;
+    margin-right: 7px;
 }
