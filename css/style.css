@@ -131,6 +131,11 @@ ul, ol {
     background: #000 url("../images/text-intro.png") no-repeat center / cover;
 }
 
+.intro--text2 {
+    height: 350px;
+    background: #000 url("../images/terma-bg.jpg") no-repeat center / cover;
+}
+
 .intro__inner {
     height: 600px;
     display: flex;
