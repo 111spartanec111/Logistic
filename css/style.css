@@ -37,7 +37,7 @@ ul, ol {
 }
 
 
-/*   Container   */
+/*   Container  --------------------------------------------  */
 
 
 .container {
@@ -45,6 +45,13 @@ ul, ol {
     max-width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* justify-content: space-between; */
 }
 
 .text-center {
@@ -63,6 +70,10 @@ ul, ol {
     right: 0;
     left: 0;
     z-index: 1000;
+}
+
+.header--dark {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .header__inner {
     height: 85px;
@@ -86,16 +97,31 @@ ul, ol {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
+.nav__link:not(.active):hover {   /* Выборка, все кроме .active подчёркиваются */
+    text-decoration: underline;
+}
+
 .nav__link.active {
     background-color: #004AF2;
 }
 
-/* Intro */
+
+/* Intro    --------------------------------------------  */
+
 
 .intro {
     margin-bottom: 30px;
     background: #000 url("../images/bg.png") no-repeat center / cover;
+}
 
+.intro--blog {
+    height: 350px;
+    background: #000 url("../images/news-intro.png") no-repeat center / cover;
+}
+
+.intro--text {
+    height: 350px;
+    background: #000 url("../images/text-intro.png") no-repeat center / cover;
 }
 
 .intro__inner {
@@ -136,7 +162,11 @@ ul, ol {
     line-height: 100px;
 }
 
-/*  FORM  */
+
+
+/*  FORM  -------------------------------------------- */
+
+
 
 .request-form {
     width: 100%;
@@ -234,7 +264,11 @@ ul, ol {
     background-image: url("../icons/dark-ico/mail-dark.png"); 
 }
 
-/*  BUTTON  */
+
+
+/*  BUTTON  --------------------------------------------  */
+
+
 
 .btn {
     position: relative;
@@ -289,7 +323,7 @@ ul, ol {
     box-shadow: none;
 }
 
-/* Section Services */
+/* Section Services ----------------------------------------*/
 
 
 .section {
@@ -300,6 +334,9 @@ ul, ol {
 }
 .section--gray {
     background: #F9F9F9;;
+}
+.section--last {
+    margin-bottom: 60px;
 }
 .section__title {
     font-family: 'Lato', sans-serif;
@@ -383,7 +420,7 @@ ul, ol {
 }
 
 
-/*   Clients   */
+/*   Clients   --------------------------------------------  */
 
 
 .clients {
@@ -429,7 +466,7 @@ ul, ol {
 }
 
 
-/*   Reviews   */
+/*   Reviews  --------------------------------------------  */
 
 
 .reviews {
@@ -492,7 +529,7 @@ ul, ol {
 }
 
 
-/*   BENEFITS   */
+/*   BENEFITS  --------------------------------------------  */
 
 
 .benefits {
@@ -554,7 +591,7 @@ ul, ol {
 }
 
 
-/*    TEAM   */
+/*    TEAM  --------------------------------------------  */
 
 
 .team {
@@ -571,6 +608,10 @@ ul, ol {
 .team__photo {
     box-shadow: 10px 5px 13px rgba(0, 0, 0, 0.16);
     margin-bottom: 13px;
+    transition: all 0.5s ease-out;
+}
+.team__photo:hover {
+    transform: scale(1.05);
 }
 .team__name {
     font-family: 'Lato', sans-serif;
@@ -609,7 +650,7 @@ ul, ol {
 }
 
 
-/*   MISSION   */
+/*   MISSION  --------------------------------------------  */
 
 .mission {
     position: relative;
@@ -667,7 +708,7 @@ ul, ol {
 } 
 
 
-/*    NEWS    */
+/*    NEWS   --------------------------------------------  */
 
 .news {
     display: flex;
@@ -675,6 +716,16 @@ ul, ol {
     justify-content: space-between;
     margin-bottom: 40px;
 }
+
+.articles--column {
+    flex-direction: column;
+}
+
+.articles--column .news__item {  
+    max-width: none;
+    margin-bottom: 45px;
+}
+
 .news__item {
     width: 100%;
     max-width: 500px;
@@ -708,13 +759,14 @@ ul, ol {
 }
 
 
-/*   FOOTER    */
+/*   FOOTER   --------------------------------------------  */
 
 
 .footer {
     background-color: #F9F9F9;
     min-height: 211px;
     padding: 40px 0;
+    margin-top: auto;
     background-image: url("../images/footer/left-tire.png"),
     url("../images/footer/right-tire.png");
     background-repeat: no-repeat;
@@ -758,7 +810,7 @@ ul, ol {
 }
 
 
-/*     MODAl     */
+/*     MODAl   --------------------------------------------  */
 
 
 .modal {
@@ -854,4 +906,87 @@ ul, ol {
 }
 .modal__img-tick {
     margin-bottom: 8px;
+}
+
+
+
+/*      MAIN -----  BLOG.HTML  -------------------  */
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+.main__col {
+    max-width: 50%;
+}
+
+
+/*    Text   ------------------------------------ */
+
+.text {
+    max-width: 890px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #585858;
+    margin-bottom: 50px;
+}
+.text p {
+    margin-bottom: 20px;
+}
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #2C2C2C;
+}
+.text h2 {
+    font-size: 27px;
+}
+.text h3 {
+    font-size: 24px;
+}
+.text h4 {
+    font-size: 21px;
+}
+.text h5 {
+    font-size: 18px;
+}
+.text h6 {
+    font-size: 15px;
+}
+
+.text ul,
+.text ol {
+    margin-bottom: 20px;
+}
+.text ol {
+    list-style: decimal; /* Возвращаем нумерацию отменённую в самом начале css */
+    list-style-position: inside; /* Маркеры списка внутри списка */
+}
+
+.text hr {
+    display: block;
+    width: 100%;
+    margin: 40px 0;
+    height: 1px;
+    border: 0;
+    background-color: #d1d1d1;
+}
+
+.text img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.text a {
+    text-decoration: none;
+    color: #004AF2;
+}
+.text a:hover {
+    text-decoration: underline;
 }
