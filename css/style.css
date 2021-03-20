@@ -1,9 +1,11 @@
 body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;  /* это 22.5 пикселя от fz15 */
     color: #585858;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.no-scroll {
@@ -92,7 +94,7 @@ ul, ol {
 .nav {
     display: flex;
     height: 100%;
-    font-size: 15px;
+    font-size: 16px;
 
 }
 .nav__link {
@@ -149,7 +151,7 @@ ul, ol {
 }
 
 .intro__countries {
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -209,7 +211,7 @@ ul, ol {
 
 .request-form__text {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     font-weight: 400;
     color: #FFFFFF;
@@ -400,7 +402,7 @@ ul, ol {
 }
 .services__text {
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 21px;
     font-weight: 400;
 }
@@ -409,7 +411,7 @@ ul, ol {
 }
 .services__link {
     display: inline-block;
-    font-size: 15px;
+    font-size: 16px;
     color: #004AF2;
     text-decoration: none;
     transition: color 0.2s linear;
@@ -522,12 +524,12 @@ ul, ol {
 }
 .reviews__company {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 18px;
     color: #2C2C2C;
 }
 .reviews__content {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 27px;
     color: #585858;
     
@@ -597,7 +599,7 @@ ul, ol {
 }
 .benefits-list__text {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 21px;
     color: #585858;
 }
@@ -634,7 +636,7 @@ ul, ol {
     margin-bottom: 5px;
 }
 .team__prof {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 19px;
     font-weight: 400;
     color: #585858;
@@ -746,7 +748,7 @@ ul, ol {
 }
 .news__title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 23px;
     color: #2C2C2C;
     margin-bottom: 15px;
@@ -759,10 +761,11 @@ ul, ol {
     text-decoration: underline;
 }
 .news__text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 21px;
     color: #585858;
     margin-bottom: 15px;
+    text-indent: 20px;
 }
 .news__date {
     display: block;
@@ -828,26 +831,33 @@ ul, ol {
 
 .modal {
     display: none;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 35px 15px;
+    overflow: auto;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    
 }
 .modal.show {
     display: flex;
 }
 .modal__inner {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    align-items: center;
+}
+.modal__content {
+    width: 100%;
     padding: 25px;
-    width: 400px;
+    max-width: 400px;
     background-color: #fff;
     position: relative;
+    
 }
 .modal__header {
     text-align: center;
@@ -862,7 +872,7 @@ ul, ol {
     margin-bottom: 10px;
 }
 .modal__text {
-    font-size: 15px;
+    font-size: 16px;
     color: #2C2C2C;
     line-height: 27px;
 }
@@ -881,7 +891,7 @@ ul, ol {
 }
 .modal__contacts {
     margin-top: 7px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 21px;
     color: #2C2C2C;
     font-style: normal;
@@ -912,7 +922,7 @@ ul, ol {
     transition: transform 0.2s linear;
 }
 .modal__close:hover {
-    transform: rotate(90deg);
+    transform: rotate(190deg);
 }
 .modal__close img {
     display: block;
@@ -945,6 +955,7 @@ ul, ol {
 }
 .text p {
     margin-bottom: 20px;
+    text-indent: 20px;
 }
 .text h2,
 .text h3,
@@ -969,7 +980,7 @@ ul, ol {
     font-size: 18px;
 }
 .text h6 {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .text ul,
@@ -1056,6 +1067,34 @@ ul, ol {
         background-size: 40%;
     }
 
+
+
+    /*     Страница BLOG -------------------------------------------*/
+
+    .intro--blog, .intro--text, .intro--text2 {
+        height: 240px;
+        margin-bottom: 0px;
+    }
+    .main__col {
+        max-width: 38%;
+        margin: 0 auto;
+    }
+    .main__col:first-child {
+        padding-bottom: 40px;
+        max-width: 60%;
+    }
+    .main__col .section__title {
+        text-align: start;
+        font-size: 40px;
+        margin-bottom: 30px;
+        line-height: 40px;
+    }
+    .articles--column .news__item {
+        margin-bottom: 45px;
+    }
+    .articles--column .news__item:last-child {
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -1174,6 +1213,20 @@ ul, ol {
     .news__item {
         max-width: 100%;
     }
+
+    /*    BLOG ----------------------------- */
+
+    .main {
+        flex-direction: column;
+    }
+    .main__col {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .main__col:first-child {
+        padding-bottom: 40px;
+        max-width: 100%;
+    }
 }
 
 
@@ -1280,5 +1333,19 @@ ul, ol {
         margin-bottom: 10px;
     }
 
+/* Modal ------------------------------------------ */
     
+    .modal__content {
+        padding: 15px;
+    }  
+    .modal__close {
+        right: 0;
+        top: -26px;
+    } 
+    .modal__title {
+        font-size: 21px;
+    }
+    .modal__text {
+        font-size: 14px;
+    }
 }
