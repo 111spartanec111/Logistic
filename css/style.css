@@ -79,6 +79,8 @@ ul, ol {
     right: 0;
     left: 0;
     z-index: 1000;
+
+    transition: background 0.2s linear;
 }
 
 .header--dark {
@@ -105,9 +107,11 @@ ul, ol {
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+    transition: background-color 0.2s linear;
 }
 .nav__link:not(.active):hover {   /* Выборка, все кроме .active подчёркиваются */
     text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav__link.active {

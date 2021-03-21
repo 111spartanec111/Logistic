@@ -13,19 +13,20 @@
 
 <div class="page">
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html">
+                <a href="#" data-scroll="#intro">
                     <img class="img" src="images/logo.png" alt="Logo">
                 </a>
                 
-                <nav class="nav">
-                    <a class="nav__link active" href="#">Services</a>
-                    <a class="nav__link" href="#">Clients</a>
-                    <a class="nav__link" href="#">Benefits</a>
-                    <a class="nav__link" href="#">Team</a>
-                    <a class="nav__link" href="#">News</a>
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#services">Services</a>
+                    <a class="nav__link" href="#" data-scroll="#clients">Clients</a>
+                    <a class="nav__link" href="#" data-scroll="#benefits">Benefits</a>
+                    <a class="nav__link" href="#" data-scroll="#team">Team</a>
+                    <a class="nav__link" href="#" data-scroll="#mission">Mission</a>
+                    <a class="nav__link" href="#" data-scroll="#news">News</a>
                     <a class="nav__link" href="#">Contact us</a>
                 </nav>
 
@@ -34,8 +35,8 @@
         </div>
     </header>
 
-
-    <div class="intro">
+    <!--   intro  -->
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <div class="request-form request-form--intro">
@@ -65,10 +66,10 @@
                 </div>
             </div>
         </div> <!-- container -->
-    </div>  <!-- intro -->
+    </div>  
 
-    <!-- Services -->
-    <section class="section">
+    <!--   Services   -->
+    <section class="section" id="services" data-scrollspy="#services">
         <div class="container">
             <div class="services">
                 <h2 class="services__main-title">Services</h2>
@@ -104,7 +105,9 @@
         </div>
     </section>
 
-    <section class="section section--map">
+
+    <!--   Clients   -->
+    <section class="section section--map" id="clients" data-scrollspy="#clients">
         <div class="container">
             <h2 class="section__title"><span>Our</span> Clients</h2>
             <div class="clients">
@@ -174,7 +177,9 @@
         </div>
     </section>
 
-    <section class="section">
+
+    <!--   Benefits   -->
+    <section class="section" id="benefits" data-scrollspy="#benefits">
         <div class="container">
             <h2 class="section__title"><span>Our</span> benefits</h2>
             <div class="benefits">
@@ -206,7 +211,8 @@
     </section>
 
 
-    <section class="section section--gray">
+    <!--   Team   -->
+    <section class="section section--gray" id="team" data-scrollspy="#team">
         <div class="container">
             <h2 class="section__title"><span>Our</span> team</h2>
             <div class="team">
@@ -265,11 +271,12 @@
         </div>
     </section>
 
-    <section class="section">
+
+    <!--  Mission    -->
+    <section class="section" id="mission" data-scrollspy="#mission">
         <div class="container">
             <h2 class="mission-title">Our mission</h2>
             <div class="mission">
-                
                 <h3 class="mission__title">To provide our customer qualified services according the international</h3>
                 <h4 class="mission__subtitle">Book your Cargo now & Your job just got a lot easier</h4>
             </div>
@@ -279,8 +286,8 @@
         </div>
     </section>
 
-
-    <section class="section section--last">
+    <!--   NEWS   -->
+    <section class="section section--last" id="news" data-scrollspy="#news">
         <div class="container">
             <h2 class="section__title"><span>Interesting</span> to read</h2>
             <div class="news">
@@ -307,7 +314,7 @@
         </div>
     </section>
     
-
+    <!-- Подвал -->
     <footer class="footer">
         <div class="container">
             <img class="footer__logo img" src="images/footer/logo-footer.png" alt="footer-logo">
@@ -324,6 +331,8 @@
     </footer>
 
 </div> <!-- Page -->
+
+
 <!--   Modal   -->
 
 <div class="modal" id="becomeClientModal">
@@ -383,5 +392,7 @@
     </div>  <!--  Modal__inner -->
 </div>
 
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
