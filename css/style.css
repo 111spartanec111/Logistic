@@ -151,7 +151,8 @@ ul, ol {
 .intro {
     position: relative;
     margin-bottom: 30px;
-    background-color: #000;
+    background: #04222a url("../images/bg.png") no-repeat center /cover;
+
 }
 
 .intro--blog {
@@ -172,6 +173,7 @@ ul, ol {
 /*    SLIDER ---------------------------------------------------------------------- */
 
 .intro__slider {
+    display: none;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -179,7 +181,16 @@ ul, ol {
     top: 0;
     left: 0;
     z-index: 1;
+    background: #04222a url("../images/bg.png") no-repeat center;
+    background-size: cover;
 }
+
+.intro__slider.slick-initialized {
+    background: #04222a;
+    display: block;
+}
+
+
 .intro__slider .slick-list,
 .intro__slider .slick-track {
     height: 100%;
@@ -577,6 +588,12 @@ ul, ol {
 
 .reviews {
     position: relative;
+    height: 200px;
+    background: url("../icons/ajax-loader.gif") no-repeat center;
+}
+.reviews.slick-initialized {
+    background: none;
+    height: auto;
 }
 .reviews:before,
 .reviews:after {
@@ -638,6 +655,7 @@ ul, ol {
 }
 
 .reviews__item {
+    display: none;
     padding: 0 10px;
 }
 .reviews__header {  /* Или Flex но тогда завернуть name company в div */
@@ -1106,7 +1124,7 @@ ul, ol {
 }
 
 
-/*    Text   ------------------------------------ */
+/*    Text HTML  ------------------------------------ */
 
 .text {
     max-width: 890px;
@@ -1181,7 +1199,11 @@ ul, ol {
 
 
 /*     MEDIA  -------------------------------------------- */
-
+@media (max-width: 1400px) {
+    .section--map {
+        background: url(../images/map.png) no-repeat left 35px top 160px;
+    }
+}
 
 @media (max-width: 991px) {
 
@@ -1212,6 +1234,7 @@ ul, ol {
     }
     .clients__review {
         width: 100%;
+        margin-bottom: 30px;
     }
     .clients__list {
         justify-content: center;
@@ -1323,6 +1346,10 @@ ul, ol {
     }
     .intro__title-amp {
         font-size: 120px;
+    }
+
+    .intro__slider-arrows {
+        display: none;
     }
 
     /* Form */
@@ -1461,9 +1488,8 @@ ul, ol {
         margin: 0 10px 20px 0;
     }
     .clients-love {
-        margin-left: 0px;
-        padding-top: 20px;
-        background-position: 20px 12px;
+        margin-top: 15px;
+        margin-left: 10px;
     }
 
     .benefits-list__title {
@@ -1476,7 +1502,7 @@ ul, ol {
     }
 
     .reviews__content {
-        line-height: 22px;
+        line-height: 20px;
     }
 
     .mission {
