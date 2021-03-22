@@ -578,15 +578,67 @@ ul, ol {
 .reviews {
     position: relative;
 }
-.reviews:before{
-    content: '';
+.reviews:before,
+.reviews:after {
+    content:'';
     display: block;
-    width: 92px;
-    height: 126px;
-    background: url("../images/line.png") no-repeat;
+    width: 15px;
+    height: 100%;
     position: absolute;
-    top: -15px;
-    z-index: 1;
+    top: 0;
+    z-index: 3;
+}
+.reviews:before {
+    left: 0;
+    background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+.reviews:after {
+    right: 0;
+    background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+}
+
+.reviews .slick-list {
+    z-index: 2;
+    padding-top: 20px;
+}
+.reviews .slick-dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: 3;
+}
+.reviews .slick-dots li {
+    margin: 0 6px;
+}
+.reviews .slick-dots li.slick-active button {
+    /* box-shadow: 0 0 0 6px rgba(0, 74, 242, 0.11); */
+    background-color: #004AF2;;
+    border-color: rgba(0, 74, 242, 0.11);
+}
+.reviews .slick-dots button {
+    box-sizing: content-box;
+    display: block;
+    padding: 0;
+    background-color: #C4C4C4;
+    background-clip: content-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    cursor: pointer;
+    color: transparent;
+    font-size: 0;
+    transition: background-color 0.2s linear, border-color 0.2s linear;
+}
+.reviews .slick-dots button:focus {
+    outline: none;
+}
+
+.reviews__item {
+    padding: 0 10px;
 }
 .reviews__header {  /* Или Flex но тогда завернуть name company в div */
     position: relative;
@@ -594,9 +646,20 @@ ul, ol {
     min-height: 100px;
     font-family: 'Lato', sans-serif;
     padding-top: 10px;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px; 
 }
+.reviews__header:before{
+    content: '';
+    display: block;
+    width: 92px;
+    height: 126px;
+    background: url("../images/line.png") no-repeat;
+    position: absolute;
+    top: -14px;
+    left: 4px;;
+    z-index: 1;
+}
+
 .reviews__photo {
     width: 100px;
     height: 100px;

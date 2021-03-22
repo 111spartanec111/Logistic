@@ -155,6 +155,23 @@ $('#introSliderNext').on('click', function() {
     introSlider.slick('slickNext')
 });
 
+
+
+/* Второй слайдер с отзывами */
+
+let reviewsSlider = $("#reviewsSlider");
+
+reviewsSlider.slick({
+    infinity: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    speed: 500,
+});
+
+
+
 });
 
 
