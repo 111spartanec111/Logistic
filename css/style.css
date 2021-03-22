@@ -1,3 +1,29 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PT_Sans/PTSans-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PT_Sans/PTSans-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Black.ttf');
+    font-weight: 900;
+}
+
 body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
@@ -119,12 +145,13 @@ ul, ol {
 }
 
 
-/* Intro    --------------------------------------------  */
+/* Intro    ------------------------------------------------------------------  */
 
 
 .intro {
+    position: relative;
     margin-bottom: 30px;
-    background: #000 url("../images/bg.png") no-repeat center / cover;
+    background-color: #000;
 }
 
 .intro--blog {
@@ -142,16 +169,74 @@ ul, ol {
     background: #000 url("../images/terma-bg.jpg") no-repeat center / cover;
 }
 
+/*    SLIDER ---------------------------------------------------------------------- */
+
+.intro__slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.intro__slider .slick-list,
+.intro__slider .slick-track {
+    height: 100%;
+}
+
+.intro__slider-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.intro__slider-arrows {
+    position: absolute;
+    bottom: 30px;
+    left: 430px;
+    pointer-events: auto;
+}
+.intro__slider-btn {
+    margin: 0 4px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    outline: none;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    background: none;
+}
+.intro__slider-btn_prev {
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.intro__slider-btn_next {
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #fff;
+
+}
+
+
 .intro__inner {
+    position: relative;
     height: 600px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .intro__text {
     margin-bottom: 50px;
     text-align: right;
+    pointer-events: auto;
 }
 
 .intro__countries {
@@ -182,6 +267,8 @@ ul, ol {
 
 
 
+
+
 /*  FORM  -------------------------------------------- */
 
 
@@ -197,6 +284,7 @@ ul, ol {
 .request-form--intro {
     position: relative;
     bottom: -30px;
+    pointer-events: auto;
 }
 
 .request-form__header {
@@ -837,7 +925,7 @@ ul, ol {
     display: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 35px 15px;
     overflow: auto;
     position: fixed;
@@ -847,7 +935,7 @@ ul, ol {
     
 }
 .modal.show {
-    display: flex;
+    display: block;
 }
 .modal__inner {
     display: flex;
@@ -861,7 +949,11 @@ ul, ol {
     max-width: 400px;
     background-color: #fff;
     position: relative;
-    
+
+    opacity: 0;
+    transform: scale(0.5);
+
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 }
 .modal__header {
     text-align: center;
@@ -924,6 +1016,9 @@ ul, ol {
     z-index: 1;
     outline: none;
     transition: transform 0.2s linear;
+}
+.modal__close:focus {
+    outline: 0;
 }
 .modal__close:hover {
     transform: rotate(190deg);
@@ -1347,9 +1442,13 @@ ul, ol {
         top: -26px;
     } 
     .modal__title {
-        font-size: 21px;
+        font-size: 20px;
     }
     .modal__text {
         font-size: 14px;
+    }
+    .modal__footer {
+        margin-top: 20px;
+        padding-top: 15px;
     }
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курс BrainsCloud</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -37,6 +38,16 @@
 
     <!--   intro  -->
     <div class="intro" id="intro">
+
+        <div class="intro__slider" id="introSlider">
+            <div>
+                <img class="intro__slider-photo" src="images/bg.png" alt="">
+            </div>
+            <div>
+                <img class="intro__slider-photo" src="images/terma-bg.jpg" alt="">
+            </div>
+        </div>
+
         <div class="container">
             <div class="intro__inner">
                 <div class="request-form request-form--intro">
@@ -63,6 +74,11 @@
                     <div class="intro__countries">USA, Europe, Asia</div>
                     <h1 class="intro__title">
                        <span class="intro__title-amp">&amp;</span> Trans <br> Logistic</h1>
+                </div>
+
+                <div class="intro__slider-arrows">
+                    <button class="intro__slider-btn intro__slider-btn_prev " type="button" id="introSliderPrev">Prev</button>
+                    <button class="intro__slider-btn intro__slider-btn_next "type="button" id="introSliderNext">Next</button>
                 </div>
             </div>
         </div> <!-- container -->
@@ -172,7 +188,9 @@
                     </div>  <!--  reviews  -->
                 </div>
             </div>  <!--  CLIENTS   -->
-            <a class="btn btn--orange"><span>Become a client</span></a>
+            <button class="btn btn--orange" type="button" data-modal="#becomeClientModal">
+                <span>Become a client</span>
+            </button>
             <span class="clients-love">we love our clients</span>
         </div>
     </section>
@@ -281,7 +299,7 @@
                 <h4 class="mission__subtitle">Book your Cargo now & Your job just got a lot easier</h4>
             </div>
             <div class="text-center">
-                <button class="btn btn--orange" type="button"><span>Become a client</span></button>
+                <button class="btn btn--orange" type="button" data-modal="#becomeClientModal"><span>Become a client</span></button>
             </div>
         </div>
     </section>
@@ -364,8 +382,9 @@
                 <p> E-mail: <a href="mailto:hello@centerlogistic.com">hello@centerlogistic.com</a></p>
              </address> 
         </div>
-        <button class="modal__close" type="button">
-            <img src="icons/close.png" alt="close"></button>
+        <button class="modal__close" type="button" data-modal-close="">
+            <img src="icons/close.png" alt="close">
+        </button>
         </div>   <!-- modal__content -->
     </div>   <!--  Modal__inner -->
 </div>   <!-- Modal -->
@@ -393,6 +412,7 @@
 </div>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
