@@ -192,7 +192,9 @@ reviewsSlider.slick({
     slidesToScroll: 1,
     arrows: false,
     dots: true,
-    speed: 500,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
 });
 
 

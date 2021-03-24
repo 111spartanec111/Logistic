@@ -206,7 +206,7 @@ body.show-nav .header {
 .intro {
     position: relative;
     margin-bottom: 30px;
-    background: #04222a url("../images/bg.png") no-repeat center /cover;
+    background: #04222a url("../images/slider/slide-1.jpg") no-repeat center /cover;
 
 }
 
@@ -236,7 +236,7 @@ body.show-nav .header {
     top: 0;
     left: 0;
     z-index: 1;
-    background: #04222a url("../images/bg.png") no-repeat center;
+    background: #04222a url("../images/slider/slide-1.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -390,11 +390,13 @@ body.show-nav .header {
     padding-left: 45px;
     padding-bottom: 12px;
     border: 0;
+    border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     color: #FFFFFF;
     transition: border-color 0.2s linear;
+    appearance: none;
 }
 
 .input::placeholder {
@@ -1362,8 +1364,8 @@ body.show-nav .header {
         position: absolute;
         flex-direction: column;
         width: 100%;
-        height: auto;
-        min-height: calc(100vh - 50px);
+        height: calc(100vh - 50px);
+        overflow: auto;         /* Для скролла меню */
         padding-top: 9px;
         top: 100%;
         left: 0;
